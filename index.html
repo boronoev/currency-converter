@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>To-Do List</title>
+  <link rel="stylesheet" href="./styles/main.css">
+
+
+</head>
+
+<body>
+
+  <header>
+    <nav class="container">
+      <img class="bank-logo" src="./images/bank-logo.svg" alt="logo">
+      <ul class="block">
+        <li class="header__item"> БАНК </li>
+        <li class="header__item"> БИЗНЕС </li>
+        <li class="header__item"> ИНВЕСТИЦИИ </li>
+        <li class="header__item"> СТРАХОВАНИЕ </li>
+        <li class="header__item"> МОБАЙЛ </li>
+        <li class="header__item"> ПУТЕШЕСТВИЯ </li>
+        <li class="header__item"> РАЗВЛЕЧЕНИЯ </li>
+      </ul>
+      <button class="avatar">ВОЙТИ</button>
+    </nav>
+
+  </header>
+  <main>
+    <h1 class="main__header">Конвертер валют онлайн</h1>
+    <div class="converter-container">
+      <div class="block__convert">
+        <p class="subtitle">У меня есть</p>
+        <div class="block__currency">
+          <button class="currency currency__from">RUB</button>
+          <button class="currency currency__from">USD</button>
+          <button class="currency currency__from">EUR</button>
+          <button class="currency currency__from">GBP</button>
+          <select class="select__currency currency__from">
+            <option class="option__currency">BYR</option>
+            <option class="option__currency">CHF</option>
+            <option class="option__currency">NOK</option>
+            <option class="option__currency">CAD</option>
+            <option class="option__currency">MXN</option>
+            <option class="option__currency">CNY</option>
+            <option class="option__currency">ISK</option>
+            <option class="option__currency">KRW</option>
+            <option class="option__currency">HKD</option>
+            <option class="option__currency">CZK</option>
+            <option class="option__currency">BGN</option>
+            <option class="option__currency">BRL</option>
+            <option class="option__currency">IDR</option>
+            <option class="option__currency">SGD</option>
+            <option class="option__currency">PHP</option>
+            <option class="option__currency">RON</option>
+            <option class="option__currency">HUF</option>
+            <option class="option__currency">ILS</option>
+            <option class="option__currency">THB</option>
+            <option class="option__currency">SEK</option>
+            <option class="option__currency">NZD</option>
+            <option class="option__currency">AUD</option>
+            <option class="option__currency">DKK</option>
+            <option class="option__currency">HRK</option>
+            <option class="option__currency">PLN</option>
+            <option class="option__currency">TRY</option>
+            <option class="option__currency">INR</option>
+            <option class="option__currency">MYR</option>
+            <option class="option__currency">ZAR</option>
+            <option class="option__currency">ZAR</option>
+            <option class="option__currency">JPY</option>
+          </select>
+        </div>
+        <div class="currency__amount">
+          <input class="input__amount" placeholder="Введите сумму" value="1">
+          <!--value только для вёрстки, удалить по завершении-->
+          <p class="rate">1 RUB = 0.0135 USD</p>
+        </div>
+      </div>
+      <div class="change__block"><button class="button__change"><img id="loading" class="change" src="./images/change.svg" alt="change arrows"></button></div>
+      <div class="block__convert">
+        <p class="subtitle">Хочу приобрести</p>
+        <div class="block__currency">
+          <button class="currency currency__to">RUB</button>
+          <button class="currency currency__to">USD</button>
+          <button class="currency currency__to">EUR</button>
+          <button class="currency currency__to">GBP</button>
+          <select class="select__currency currency__to">
+            <option class="option__currency">BYR</option>
+            <option class="option__currency">CHF</option>
+            <option class="option__currency">NOK</option>
+            <option class="option__currency">CAD</option>
+            <option class="option__currency">MXN</option>
+            <option class="option__currency">CNY</option>
+            <option class="option__currency">ISK</option>
+            <option class="option__currency">KRW</option>
+            <option class="option__currency">HKD</option>
+            <option class="option__currency">CZK</option>
+            <option class="option__currency">BGN</option>
+            <option class="option__currency">BRL</option>
+            <option class="option__currency">IDR</option>
+            <option class="option__currency">SGD</option>
+            <option class="option__currency">PHP</option>
+            <option class="option__currency">RON</option>
+            <option class="option__currency">HUF</option>
+            <option class="option__currency">ILS</option>
+            <option class="option__currency">THB</option>
+            <option class="option__currency">SEK</option>
+            <option class="option__currency">NZD</option>
+            <option class="option__currency">AUD</option>
+            <option class="option__currency">DKK</option>
+            <option class="option__currency">HRK</option>
+            <option class="option__currency">PLN</option>
+            <option class="option__currency">TRY</option>
+            <option class="option__currency">INR</option>
+            <option class="option__currency">MYR</option>
+            <option class="option__currency">ZAR</option>
+            <option class="option__currency">ZAR</option>
+            <option class="option__currency">JPY</option>
+          </select>
+        </div>
+        <div class="currency__amount">
+          <input class="input__amount" placeholder="Введите сумму" value="67.6685">
+          <!--value только для вёрстки, удалить по завершении-->
+          <p class="rate">1 USD = 73.8896 RUB</p>
+        </div>
+      </div>
+    </div>
+  </main>
+
+
+  <script type="module" src="./scripts/script.js"></script>
+</body>
+
+</html>

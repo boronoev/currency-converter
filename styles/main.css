@@ -1,0 +1,233 @@
+@import "./reset.css";
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700;900&display=swap');
+
+
+
+body {
+  font-family: 'Roboto', sans-serif;
+  font-size: 16px;
+}
+
+header {
+  display: flex;
+  justify-content: space-between;
+  background-color: #F5F5F6;
+  height: 50px;
+  align-items: center;
+
+}
+button, select {
+  cursor: pointer;
+}
+.container {
+  display: flex;
+  width: 950px;
+  margin: 0 auto;
+  height: 50px;
+  align-items: center;
+}
+
+.bank-logo {
+  width: 89px;
+  height: 23px;
+  margin-right: 64px;
+  cursor: pointer;
+}
+
+ul {
+  padding: 0;
+  display: flex;
+  align-items: center;
+}
+
+.header__item {
+  padding: 0 12px;
+  display: inline-block;
+  text-decoration: none;
+  font-weight: 500;
+  font-size: 11px;
+  line-height: 13px;
+  color: #959BA4;
+  letter-spacing: 0.06em;
+  cursor: pointer;
+}
+.header__item:first-child {
+  color: black;
+}
+
+.avatar {
+  width: 58px;
+  height: 33px;
+  border-radius:4px;
+  background-color: white;
+  margin: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-left: 108px;
+  font-weight: 600;
+  font-size: 11px;
+  letter-spacing: 0.06em;
+  border: none;
+}
+
+.header__item:hover {
+  position: relative;
+  bottom: 2px;
+  left: 2px;
+  color: #833ae0;
+}
+
+.avatar:hover,  .bank-logo:hover {
+  position: relative;
+  bottom: 1px;
+  left: 1px;
+}
+
+/* .currency__from:hover, .currency__to:hover {
+  position: relative;
+  bottom: 1px;
+} */
+.main__header {
+  font-weight: bold;
+  font-size: 36px;
+  line-height: 42px;
+  margin-top: 56px;
+  margin-bottom: 40px;
+}
+
+main {
+  width: 646px;
+  margin: 0 auto;
+}
+
+
+.change {
+  
+  width: 37px;
+  height: 32px;
+  display: block;
+}
+
+.change__block{
+  padding-top: 80px;
+}
+.block__convert {
+  width: 259px;
+  height:   174px;
+  /*после создания частей размеры всего блока удалить, сейчас для примера */
+  /* border: 1px solid #E5E5E5; */
+  box-sizing: border-box;
+  border-radius: 3px;
+}
+
+.converter-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+
+.subtitle {
+  font-size: 12px;
+  line-height: 14px;
+  color: #9F9F9F;
+  margin-bottom: 8px;
+}
+
+.button__change {
+  background-color: transparent;
+  border: none;
+  border-collapse: collapse;
+}
+
+.currency {
+  font-size: 12px;
+  line-height: 14px;
+  width: fit-content;
+  margin: 0;
+  display: block;
+  padding:  7px 12px;
+  border: 1px solid #E5E5E5;
+  background-color: white;
+  color: #C6C6C6;
+  border-right: none;
+}
+
+.currency:first-child {
+  border-top-left-radius: 3px;
+  border-bottom-left-radius: 3px;
+}
+.block__currency {
+  display: flex;
+  margin-bottom: 20px;
+}
+
+.select__currency {
+  color: #C6C6C6;
+  border: 1px solid #E5E5E5;
+  font-size: 12px;
+  line-height: 14px;
+  padding-left: 3px;
+  background-color: white;
+  border-top-right-radius: 3px;
+  border-bottom-right-radius: 3px;
+  outline: none;
+}
+
+.currency__amount {
+  height: 102px;
+  border: 1px solid #E5E5E5;
+  border-radius: 3px;
+}
+
+
+.input__amount {
+  font-weight: bold;
+  font-size: 36px;
+  line-height: 42px;
+  width: 256px;
+  border: none;
+  margin-bottom: 15px;
+  padding-left: 14px;
+  padding-top: 11px;
+  padding-bottom: 5px;
+  box-sizing: border-box;
+  color: black;
+}
+
+.rate {
+  padding-left: 16px;
+  font-size: 12px;
+  line-height: 14px;
+  color: #C6C6C6;
+}
+
+
+input::placeholder {
+  font-size: 20px;
+}
+
+.option__currency {
+  color: black;
+
+}
+
+.button__change.active{
+  transition: 0.4s;
+
+  transform: rotate(180deg);
+}
+
+.currency__from:nth-child(1) {
+  background-color:  #833AE0;
+  border-color: #833AE0;
+  color:  white;
+}
+
+.currency__to:nth-child(2) {
+  background-color:  #833AE0;
+  border-color: #833AE0;
+  color:  white;
+}
+
