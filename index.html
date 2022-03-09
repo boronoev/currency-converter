@@ -35,11 +35,11 @@
       <div class="block__convert">
         <p class="subtitle">У меня есть</p>
         <div class="block__currency">
-          <button class="currency currency__from">RUB</button>
-          <button class="currency currency__from">USD</button>
-          <button class="currency currency__from">EUR</button>
-          <button class="currency currency__from">GBP</button>
-          <select class="select__currency currency__from">
+          <button class="currency currency__from" value="1">RUB</button>
+          <button class="currency currency__from" value="0">USD</button>
+          <button class="currency currency__from" value="0">EUR</button>
+          <button class="currency currency__from" value="0">GBP</button>
+          <select class="select__currency currency__from" value="0">
             <option class="option__currency">BYR</option>
             <option class="option__currency">CHF</option>
             <option class="option__currency">NOK</option>
@@ -76,18 +76,18 @@
         <div class="currency__amount">
           <input class="input__amount" placeholder="Введите сумму" value="1">
           <!--value только для вёрстки, удалить по завершении-->
-          <p class="rate">1 RUB = 0.0135 USD</p>
+          <p class="rate rate-from">1 RUB = 0.0135 USD</p>
         </div>
       </div>
       <div class="change__block"><button class="button__change"><img id="loading" class="change" src="./images/change.svg" alt="change arrows"></button></div>
       <div class="block__convert">
         <p class="subtitle">Хочу приобрести</p>
         <div class="block__currency">
-          <button class="currency currency__to">RUB</button>
-          <button class="currency currency__to">USD</button>
-          <button class="currency currency__to">EUR</button>
-          <button class="currency currency__to">GBP</button>
-          <select class="select__currency currency__to">
+          <button class="currency currency__to" value="0">RUB</button>
+          <button class="currency currency__to" value="1">USD</button>
+          <button class="currency currency__to" value="0">EUR</button>
+          <button class="currency currency__to" value="0">GBP</button>
+          <select class="select__currency currency__to" value="0">
             <option class="option__currency">BYR</option>
             <option class="option__currency">CHF</option>
             <option class="option__currency">NOK</option>
@@ -122,9 +122,9 @@
           </select>
         </div>
         <div class="currency__amount">
-          <input class="input__amount" placeholder="Введите сумму" value="67.6685">
+          <input class="input__amount input-to" type="number" placeholder="Введите сумму" value="67.6685">
           <!--value только для вёрстки, удалить по завершении-->
-          <p class="rate">1 USD = 73.8896 RUB</p>
+          <p class="rate rate-to">1 USD = 73.8896 RUB</p>
         </div>
       </div>
     </div>
