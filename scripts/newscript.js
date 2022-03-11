@@ -82,7 +82,8 @@ fetch(`${url}?base=${from}&symbols=${to}`)
   })
 
 fromInput.addEventListener('input', async () => {
-  loadingTimer = setTimeout(() => {
+
+  let loadingTimer = setTimeout(() => {
     document.querySelector('.backgroundColor').classList.add('gray');
     document.querySelector('.background').classList.add('loading');
   }, 500);
@@ -94,6 +95,9 @@ fromInput.addEventListener('input', async () => {
   fetch(`${url}?base=${from}&symbols=${to}`)
     .then(res => res.json())
     .then(data => {
+      // clearTimeout(loadingTimer);
+      // document.querySelector('.backgroundColor').classList.remove('gray');
+      // document.querySelector('.background').classList.remove('loading');
       document.querySelector('.rate-from').textContent = `1 ${from} = ${data.rates[`${to}`].toFixed(4)} ${to}`;
       document.querySelector('.rate-to').textContent = `1 ${to} = ${(1 / data.rates[`${to}`]).toFixed(4)} ${from}`;
     })
@@ -106,7 +110,7 @@ fromInput.addEventListener('input', async () => {
 })
 
 toInput.addEventListener('input', async () => {
-  loadingTimer = setTimeout(() => {
+  let loadingTimer = setTimeout(() => {
     document.querySelector('.backgroundColor').classList.add('gray');
     document.querySelector('.background').classList.add('loading');
   }, 500);
@@ -371,11 +375,11 @@ document.querySelectorAll('.button-currency__to').forEach(element => {
         document.querySelector('.backgroundColor').classList.remove('gray');
         document.querySelector('.background').classList.remove('loading');
       })
-      loadingTimer = setTimeout(() => {
-        document.querySelector('.backgroundColor').classList.add('gray');
-        document.querySelector('.background').classList.add('loading');
-        }, 500);
-        
+    loadingTimer = setTimeout(() => {
+      document.querySelector('.backgroundColor').classList.add('gray');
+      document.querySelector('.background').classList.add('loading');
+    }, 500);
+
     toInput.value = await convert(from, to, fromInput.value);
     clearTimeout(loadingTimer);
     document.querySelector('.backgroundColor').classList.remove('gray');
@@ -417,10 +421,10 @@ document.querySelectorAll('.select-currency__to').forEach(element => {
         document.querySelector('.backgroundColor').classList.remove('gray');
         document.querySelector('.background').classList.remove('loading');
       })
-      loadingTimer = setTimeout(() => {
-        document.querySelector('.backgroundColor').classList.add('gray');
-        document.querySelector('.background').classList.add('loading');
-        }, 500);
+    loadingTimer = setTimeout(() => {
+      document.querySelector('.backgroundColor').classList.add('gray');
+      document.querySelector('.background').classList.add('loading');
+    }, 500);
     toInput.value = await convert(from, to, fromInput.value)
     clearTimeout(loadingTimer);
     document.querySelector('.backgroundColor').classList.remove('gray');
