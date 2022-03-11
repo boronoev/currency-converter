@@ -232,3 +232,31 @@ input::placeholder {
   color:  white;
 }
 
+/* .primary {
+  color: white;
+  background-color: #833AE0;
+  border-color: #833AE0;
+} */
+
+html {
+  position: relative;
+}
+.loading {
+  z-index: 999999;
+  position: fixed;
+  top: calc((100% - 54px)/2 - 100px);
+  bottom: 0;
+  left: calc((100% - 130px)/2);
+  right: 0;
+  background-image: url(../images/loading-only.svg);
+  background-repeat: no-repeat;
+}
+
+.gray {
+  background-color: rgba(0,0,0, 0.44);
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+}

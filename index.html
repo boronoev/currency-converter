@@ -12,7 +12,8 @@
 </head>
 
 <body>
-
+  <div class="backgroundColor"></div>
+  <div class="background"></div>
   <header>
     <nav class="container">
       <img class="bank-logo" src="./images/bank-logo.svg" alt="logo">
@@ -34,95 +35,36 @@
     <div class="converter-container">
       <div class="block__convert">
         <p class="subtitle">У меня есть</p>
-        <div class="block__currency">
-          <button class="currency currency__from" value="1">RUB</button>
-          <button class="currency currency__from" value="0">USD</button>
-          <button class="currency currency__from" value="0">EUR</button>
-          <button class="currency currency__from" value="0">GBP</button>
-          <select class="select__currency currency__from" value="0">
-            <option class="option__currency">BYR</option>
-            <option class="option__currency">CHF</option>
-            <option class="option__currency">NOK</option>
-            <option class="option__currency">CAD</option>
-            <option class="option__currency">MXN</option>
-            <option class="option__currency">CNY</option>
-            <option class="option__currency">ISK</option>
-            <option class="option__currency">KRW</option>
-            <option class="option__currency">HKD</option>
-            <option class="option__currency">CZK</option>
-            <option class="option__currency">BGN</option>
-            <option class="option__currency">BRL</option>
-            <option class="option__currency">IDR</option>
-            <option class="option__currency">SGD</option>
-            <option class="option__currency">PHP</option>
-            <option class="option__currency">RON</option>
-            <option class="option__currency">HUF</option>
-            <option class="option__currency">ILS</option>
-            <option class="option__currency">THB</option>
-            <option class="option__currency">SEK</option>
-            <option class="option__currency">NZD</option>
-            <option class="option__currency">AUD</option>
-            <option class="option__currency">DKK</option>
-            <option class="option__currency">HRK</option>
-            <option class="option__currency">PLN</option>
-            <option class="option__currency">TRY</option>
-            <option class="option__currency">INR</option>
-            <option class="option__currency">MYR</option>
-            <option class="option__currency">ZAR</option>
-            <option class="option__currency">ZAR</option>
-            <option class="option__currency">JPY</option>
+        <div class="block__currency" id="block1">
+          <button class="currency currency__from button-currency__from primary" value="1">RUB</button>
+          <button class="currency currency__from button-currency__from" value="0">USD</button>
+          <button class="currency currency__from button-currency__from" value="0">EUR</button>
+          <button class="currency currency__from button-currency__from" value="0">GBP</button>
+          <select class="select__currency currency__from select-currency__from" value="0">
+
           </select>
         </div>
         <div class="currency__amount">
-          <input class="input__amount" placeholder="Введите сумму" value="1">
+          <input class="input__amount input-from" placeholder="Введите сумму">
           <!--value только для вёрстки, удалить по завершении-->
           <p class="rate rate-from">1 RUB = 0.0135 USD</p>
         </div>
       </div>
-      <div class="change__block"><button class="button__change"><img id="loading" class="change" src="./images/change.svg" alt="change arrows"></button></div>
+      <div class="change__block"><button class="button__change"><img id="loading" class="change"
+            src="./images/change.svg" alt="change arrows"></button></div>
       <div class="block__convert">
         <p class="subtitle">Хочу приобрести</p>
-        <div class="block__currency">
-          <button class="currency currency__to" value="0">RUB</button>
-          <button class="currency currency__to" value="1">USD</button>
-          <button class="currency currency__to" value="0">EUR</button>
-          <button class="currency currency__to" value="0">GBP</button>
-          <select class="select__currency currency__to" value="0">
-            <option class="option__currency">BYR</option>
-            <option class="option__currency">CHF</option>
-            <option class="option__currency">NOK</option>
-            <option class="option__currency">CAD</option>
-            <option class="option__currency">MXN</option>
-            <option class="option__currency">CNY</option>
-            <option class="option__currency">ISK</option>
-            <option class="option__currency">KRW</option>
-            <option class="option__currency">HKD</option>
-            <option class="option__currency">CZK</option>
-            <option class="option__currency">BGN</option>
-            <option class="option__currency">BRL</option>
-            <option class="option__currency">IDR</option>
-            <option class="option__currency">SGD</option>
-            <option class="option__currency">PHP</option>
-            <option class="option__currency">RON</option>
-            <option class="option__currency">HUF</option>
-            <option class="option__currency">ILS</option>
-            <option class="option__currency">THB</option>
-            <option class="option__currency">SEK</option>
-            <option class="option__currency">NZD</option>
-            <option class="option__currency">AUD</option>
-            <option class="option__currency">DKK</option>
-            <option class="option__currency">HRK</option>
-            <option class="option__currency">PLN</option>
-            <option class="option__currency">TRY</option>
-            <option class="option__currency">INR</option>
-            <option class="option__currency">MYR</option>
-            <option class="option__currency">ZAR</option>
-            <option class="option__currency">ZAR</option>
-            <option class="option__currency">JPY</option>
+        <div class="block__currency" id="block2">
+          <button class="currency currency__to button-currency__to" value="0">RUB</button>
+          <button class="currency currency__to button-currency__to primary" value="1">USD</button>
+          <button class="currency currency__to button-currency__to" value="0">EUR</button>
+          <button class="currency currency__to button-currency__to" value="0">GBP</button>
+          <select class="select__currency currency__to select-currency__to">
+
           </select>
         </div>
         <div class="currency__amount">
-          <input class="input__amount input-to" type="number" placeholder="Введите сумму" value="67.6685">
+          <input class="input__amount input-to" type="number" placeholder="Введите сумму">
           <!--value только для вёрстки, удалить по завершении-->
           <p class="rate rate-to">1 USD = 73.8896 RUB</p>
         </div>
@@ -130,8 +72,9 @@
     </div>
   </main>
 
+  <!-- <script type="module" src="./scripts/script.js"></script> -->
+  <script type="module" src="./scripts/newscript.js"></script>
 
-  <script type="module" src="./scripts/script.js"></script>
 </body>
 
 </html>
