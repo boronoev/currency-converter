@@ -38,6 +38,9 @@ fetch(`https://api.exchangerate.host/symbols`)
   })
   .catch(error => {
     alert(`Что-то произошло не так! Ошибка: ${error.message}`);
+    clearTimeout(loadingTimer);
+    document.querySelector('.backgroundColor').classList.remove('gray');
+    document.querySelector('.background').classList.remove('loading');
   })
 
 
@@ -45,6 +48,9 @@ fetch(`https://api.exchangerate.host/symbols`)
 async function convert(from, to, amount) {
   const res = await fetch(`https://api.exchangerate.host/convert?from=${from}&to=${to}&amount=${amount}&places=4`).catch(error => {
     alert(`Что-то произошло не так! Ошибка: ${error.message}`);
+    clearTimeout(loadingTimer);
+    document.querySelector('.backgroundColor').classList.remove('gray');
+    document.querySelector('.background').classList.remove('loading');
   });
   const json = await res.json();
   return json.result;
@@ -70,6 +76,9 @@ fetch(`${url}?base=${from}&symbols=${to}`)
   })
   .catch(error => {
     alert(`Что-то произошло не так! Ошибка: ${error.message}`);
+    clearTimeout(loadingTimer);
+    document.querySelector('.backgroundColor').classList.remove('gray');
+    document.querySelector('.background').classList.remove('loading');
   })
 
 fromInput.addEventListener('input', async () => {
@@ -90,6 +99,9 @@ fromInput.addEventListener('input', async () => {
     })
     .catch(error => {
       alert(`Что-то произошло не так! Ошибка: ${error.message}`);
+      clearTimeout(loadingTimer);
+      document.querySelector('.backgroundColor').classList.remove('gray');
+      document.querySelector('.background').classList.remove('loading');
     })
 })
 
@@ -110,6 +122,9 @@ toInput.addEventListener('input', async () => {
     })
     .catch(error => {
       alert(`Что-то произошло не так! Ошибка: ${error.message}`);
+      clearTimeout(loadingTimer);
+      document.querySelector('.backgroundColor').classList.remove('gray');
+      document.querySelector('.background').classList.remove('loading');
     })
 })
 
@@ -221,10 +236,12 @@ document.querySelector('.button__change').addEventListener('click', () => {
     })
     .catch(error => {
       alert(`Что-то произошло не так! Ошибка: ${error.message}`);
+      clearTimeout(loadingTimer);
+      document.querySelector('.backgroundColor').classList.remove('gray');
+      document.querySelector('.background').classList.remove('loading');
     })
 
 })
-
 
 
 
@@ -259,6 +276,9 @@ document.querySelectorAll('.button-currency__from').forEach(element => {
       })
       .catch(error => {
         alert(`Что-то произошло не так! Ошибка: ${error.message}`);
+        clearTimeout(loadingTimer);
+        document.querySelector('.backgroundColor').classList.remove('gray');
+        document.querySelector('.background').classList.remove('loading');
       })
     loadingTimer = setTimeout(() => {
       document.querySelector('.backgroundColor').classList.add('gray');
@@ -301,6 +321,9 @@ document.querySelectorAll('.select-currency__from').forEach(element => {
       })
       .catch(error => {
         alert(`Что-то произошло не так! Ошибка: ${error.message}`);
+        clearTimeout(loadingTimer);
+        document.querySelector('.backgroundColor').classList.remove('gray');
+        document.querySelector('.background').classList.remove('loading');
       })
     loadingTimer = setTimeout(() => {
       document.querySelector('.backgroundColor').classList.add('gray');
@@ -344,6 +367,9 @@ document.querySelectorAll('.button-currency__to').forEach(element => {
       })
       .catch(error => {
         alert(`Что-то произошло не так! Ошибка: ${error.message}`);
+        clearTimeout(loadingTimer);
+        document.querySelector('.backgroundColor').classList.remove('gray');
+        document.querySelector('.background').classList.remove('loading');
       })
       loadingTimer = setTimeout(() => {
         document.querySelector('.backgroundColor').classList.add('gray');
@@ -387,6 +413,9 @@ document.querySelectorAll('.select-currency__to').forEach(element => {
       })
       .catch(error => {
         alert(`Что-то произошло не так! Ошибка: ${error.message}`);
+        clearTimeout(loadingTimer);
+        document.querySelector('.backgroundColor').classList.remove('gray');
+        document.querySelector('.background').classList.remove('loading');
       })
       loadingTimer = setTimeout(() => {
         document.querySelector('.backgroundColor').classList.add('gray');
@@ -399,4 +428,3 @@ document.querySelectorAll('.select-currency__to').forEach(element => {
     if (fromInput.value === '') { fromInput.value = 1 }
   })
 })
-
